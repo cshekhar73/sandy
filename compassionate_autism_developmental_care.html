@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeaconCare Autism & Family Services | Empowering Every Milestone</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons for Healthcare & Socials -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            coral: {
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+            },
+            warmbg: '#fafafa',
+            slatecard: '#f8fafc',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom accessibility focus outlines & styling */
+    :focus-visible {
+      outline: 2px solid #0d9488;
+      outline-offset: 2px;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 30%, rgba(20, 184, 166, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-warmbg text-slate-800 font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
+
+  <!-- ================= TOP EMERGENCY & ANNOUNCEMENT BAR ================= -->
+  <div class="bg-brand-900 text-brand-50 text-xs sm:text-sm py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 text-center sm:text-left">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-200 border border-brand-500/30">
+          <i class="fa-solid fa-clipboard-check mr-1.5"></i> Now Accepting Intake
+        </span>
+        <span class="hidden md:inline text-brand-200">|</span>
+        <span>Accepting Virginia Medicaid, Anthem, CareFirst, Aetna & TRICARE</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:8045550199" class="font-medium hover:text-brand-200 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-brand-300"></i> (804) 555-0199
+        </a>
+        <span class="text-brand-700">|</span>
+        <a href="#insurance" class="hover:underline text-brand-200 hidden sm:inline">Verify Benefits</a>
+        <span class="text-brand-700 hidden sm:inline">|</span>
+        <!-- Social icon links -->
+        <div class="flex items-center gap-3 ml-1 text-brand-200">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" class="hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube" class="hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVIGATION BAR ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-700 via-brand-600 to-teal-400 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition transform">
+            <i class="fa-solid fa-shapes text-xl"></i>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 block leading-none">
+              Beacon<span class="text-brand-600">Care</span>
+            </span>
+            <span class="text-[11px] font-medium tracking-wider text-slate-500 uppercase mt-0.5 block">Autism & Family Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="#services" class="hover:text-brand-600 transition">Services & ABA</a>
+          <a href="#care-finder" class="hover:text-brand-600 transition flex items-center gap-1.5">
+            <span>Pathway Finder</span>
+            <span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold uppercase">Quiz</span>
+          </a>
+          <a href="#about" class="hover:text-brand-600 transition">Our Approach</a>
+          <a href="#insurance" class="hover:text-brand-600 transition">Insurance & Coverage</a>
+          <a href="#testimonials" class="hover:text-brand-600 transition">Family Stories</a>
+          <a href="#faq" class="hover:text-brand-600 transition">FAQs</a>
+        </nav>
+
+        <!-- Right Action Button & Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <button onclick="openIntakeModal()" class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 shadow-md shadow-brand-600/25 hover:shadow-lg transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Schedule Intake</span>
+          </button>
+
+          <!-- Mobile Menu Trigger -->
+          <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none">
+            <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 shadow-xl space-y-3">
+      <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Services & Programs</a>
+      <a href="#care-finder" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Care Pathway Finder (Quiz)</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">About & Team</a>
+      <a href="#insurance" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Insurance & Medicaid</a>
+      <a href="#testimonials" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Parent Testimonials</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Frequently Asked Questions</a>
+      <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="toggleMobileMenu(); openIntakeModal();" class="w-full text-center py-3 rounded-xl bg-brand-600 text-white font-semibold shadow-md">
+          Schedule Free Intake Assessment
+        </button>
+        <a href="tel:8045550199" class="w-full text-center py-2.5 rounded-xl border border-slate-200 text-slate-700 font-medium">
+          <i class="fa-solid fa-phone mr-2 text-brand-600"></i> Call (804) 555-0199
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden pt-8 pb-16 lg:py-20 hero-glow border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-200/80 text-brand-800 text-xs sm:text-sm font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            Comprehensive Autism Spectrum & Neurodivergent Care
+          </div>
+          
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Empowering Every <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-teal-500">Milestone</span>, Supporting Every <span class="underline decoration-coral-400 decoration-wavy decoration-2">Family</span>.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Specialized Applied Behavior Analysis (ABA), speech development, community integration, and caregiver coaching tailored to children, teens, and young adults with developmental differences.
+          </p>
+
+          <!-- Dual CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button onclick="openIntakeModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <span>Start Family Registration</span>
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </button>
+            <a href="#services" class="w-full sm:w-auto px-7 py-4 rounded-xl text-base font-semibold text-slate-700 bg-white border border-slate-200 hover:border-brand-300 hover:bg-brand-50/50 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-puzzle-piece text-brand-600"></i>
+              <span>Explore ABA Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges & Clinical Highlights -->
+          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center sm:text-left">
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-slate-900">100%</p>
+              <p class="text-xs sm:text-sm text-slate-500">BCBA & Licensed Clinician Led</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-brand-600">1-on-1</p>
+              <p class="text-xs sm:text-sm text-slate-500">Individualized Therapy Plans</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-slate-900">12+ Yrs</p>
+              <p class="text-xs sm:text-sm text-slate-500">Trusted Community Service</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Decorative colored backdrop -->
+            <div class="absolute -top-4 -left-4 w-72 h-72 bg-brand-200 rounded-3xl filter blur-3xl opacity-50 -z-10"></div>
+            <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-coral-400 rounded-3xl filter blur-3xl opacity-30 -z-10"></div>
+
+            <!-- Main Feature Card -->
+            <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-slate-100 space-y-6">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-slate-900 text-sm">Compassionate Intake</h3>
+                    <p class="text-xs text-slate-500">Immediate response within 24 hours</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  Slots Open
+                </span>
+              </div>
+
+              <!-- Pathway mini cards -->
+              <div class="space-y-3">
+                <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between hover:border-brand-200 transition">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center text-sm font-semibold">
+                      <i class="fa-solid fa-house-chimney-window"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-slate-800">In-Home ABA Therapy</p>
+                      <p class="text-[11px] text-slate-500">Natural home setting routines</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-medium text-brand-600">Ages 2 - 21</span>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between hover:border-brand-200 transition">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm font-semibold">
+                      <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-slate-800">Clinic & School Readiness</p>
+                      <p class="text-[11px] text-slate-500">Peer play & sensory integration</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-medium text-brand-600">Center-Based</span>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between hover:border-brand-200 transition">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-sm font-semibold">
+                      <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold text-slate-800">Parent Coaching & Respite</p>
+                      <p class="text-[11px] text-slate-500">Empowering whole families</p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-medium text-brand-600">Ongoing</span>
+                </div>
+              </div>
+
+              <!-- Quick Intake trigger within hero card -->
+              <button onclick="openIntakeModal()" class="w-full py-3.5 rounded-xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-clipboard-user text-brand-400"></i>
+                <span>Register Your Family Today</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CORE SERVICES SECTION ================= -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+          Our Clinical Specializations
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+          Holistic Services Built Around Every Child's Unique Strengths
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
+          Inspired by evidence-based care models, we treat every individual as a whole person, supporting communicative autonomy, emotional regulation, and joyful community participation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service Card 1: ABA Therapy -->
+        <div class="bg-warmbg rounded-3xl p-8 border border-slate-200 hover:border-brand-400 hover:shadow-xl transition group duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Applied Behavior Analysis (ABA)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Positive reinforcement and neuro-affirming behavior plans guided directly by Board Certified Behavior Analysts (BCBAs) and skilled Registered Behavior Technicians (RBTs).
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Early intervention (Ages 18mo - 6yrs)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Emotional regulation & coping tools</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Reduction of high-intensity behaviors</li>
+            </ul>
+          </div>
+          <button onclick="prefillIntake('Applied Behavior Analysis (ABA)')" class="w-full py-2.5 rounded-xl border border-brand-600 text-brand-700 font-semibold text-xs hover:bg-brand-600 hover:text-white transition">
+            Request ABA Consultation
+          </button>
+        </div>
+
+        <!-- Service Card 2: In-Home & Community Support -->
+        <div class="bg-warmbg rounded-3xl p-8 border border-slate-200 hover:border-brand-400 hover:shadow-xl transition group duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-house-chimney-user"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">In-Home & Community Living</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Real-world learning where life happens. We help youth and young adults develop self-help routines, mealtime tolerance, hygiene habits, and grocery outing skills.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Morning & bedtime transitions</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Independence in public spaces</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Community volunteerism & integration</li>
+            </ul>
+          </div>
+          <button onclick="prefillIntake('In-Home & Community Support')" class="w-full py-2.5 rounded-xl border border-brand-600 text-brand-700 font-semibold text-xs hover:bg-brand-600 hover:text-white transition">
+            Request In-Home Support
+          </button>
+        </div>
+
+        <!-- Service Card 3: Speech & Alternative Communication -->
+        <div class="bg-warmbg rounded-3xl p-8 border border-slate-200 hover:border-brand-400 hover:shadow-xl transition group duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Speech & AAC Communication</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Giving every individual their authentic voice through expressive speech practice, non-verbal gestures, and Augmentative & Alternative Communication (AAC) devices.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> High-tech AAC device setup (Proloquo, TouchChat)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Functional request training</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Feeding & oral sensory integration</li>
+            </ul>
+          </div>
+          <button onclick="prefillIntake('Speech & AAC Communication')" class="w-full py-2.5 rounded-xl border border-brand-600 text-brand-700 font-semibold text-xs hover:bg-brand-600 hover:text-white transition">
+            Request Speech Services
+          </button>
+        </div>
+
+        <!-- Service Card 4: Social Skills Groups -->
+        <div class="bg-warmbg rounded-3xl p-8 border border-slate-200 hover:border-brand-400 hover:shadow-xl transition group duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-children"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Social Groups & Peer Play</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Nurturing genuine friendships in small, neurodiversity-affirming peer pods. Structured activities include cooperative gaming, sports, board games, and conversational turns.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Matched by age and mutual interests</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Perspective taking & teamwork</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Weekend sensory-friendly gatherings</li>
+            </ul>
+          </div>
+          <button onclick="prefillIntake('Social Skills & Peer Groups')" class="w-full py-2.5 rounded-xl border border-brand-600 text-brand-700 font-semibold text-xs hover:bg-brand-600 hover:text-white transition">
+            Join a Social Group
+          </button>
+        </div>
+
+        <!-- Service Card 5: Caregiver Training & Family Respite -->
+        <div class="bg-warmbg rounded-3xl p-8 border border-slate-200 hover:border-brand-400 hover:shadow-xl transition group duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Caregiver Coaching & Respite</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Parents cannot pour from an empty cup. We offer individualized parent training, sibling empathy workshops, and respite coordination to restore family peace.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> De-escalation & co-regulation strategies</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> IEP meeting advocacy guidance</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Medicaid Waiver (DD Waiver) navigation</li>
+            </ul>
+          </div>
+          <button onclick="prefillIntake('Caregiver Coaching & Respite')" class="w-full py-2.5 rounded-xl border border-brand-600 text-brand-700 font-semibold text-xs hover:bg-brand-600 hover:text-white transition">
+            Learn About Caregiver Support
+          </button>
+        </div>
+
+        <!-- Service Card 6: ADOS-2 & Diagnostics -->
+        <div class="bg-warmbg rounded-3xl p-8 border border-slate-200 hover:border-brand-400 hover:shadow-xl transition group duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Diagnostic & Clinical Consults</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Assisting families with screening evaluations, ADOS-2 behavioral observations, and functional behavior assessments (FBA) to unlock state and medical benefits.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Clear diagnostic pathway assistance</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Comprehensive functional assessments</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Fast-track pediatric referrals</li>
+            </ul>
+          </div>
+          <button onclick="prefillIntake('Diagnostic Consultation / Assessment')" class="w-full py-2.5 rounded-xl border border-brand-600 text-brand-700 font-semibold text-xs hover:bg-brand-600 hover:text-white transition">
+            Book Diagnostic Consultation
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE CARE PATHWAY FINDER WIDGET ================= -->
+  <section id="care-finder" class="py-16 bg-gradient-to-b from-brand-900 via-slate-900 to-brand-950 text-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-10">
+        <span class="inline-block px-3 py-1 bg-brand-500/20 text-brand-300 rounded-full text-xs font-semibold tracking-wider uppercase border border-brand-500/30">
+          Interactive Assessment Quiz
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold mt-3">
+          Find the Right Care Pathway for Your Child
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          Answer 3 brief questions to view our recommended therapies and insurance checklist.
+        </p>
+      </div>
+
+      <!-- Quiz Card Container -->
+      <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/15 shadow-2xl">
+        <form id="quizForm" onsubmit="handleQuizSubmit(event)">
+          
+          <div class="space-y-8">
+            <!-- Question 1: Child Age -->
+            <div>
+              <label class="block text-sm font-semibold text-brand-200 mb-3">
+                1. What is the individual's current age bracket?
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <label class="cursor-pointer">
+                  <input type="radio" name="childAge" value="toddler" class="peer sr-only" checked>
+                  <div class="p-3 text-center rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm">
+                    <span class="block font-bold">18m - 3 yrs</span>
+                    <span class="text-[11px] opacity-75">Toddler</span>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="childAge" value="early" class="peer sr-only">
+                  <div class="p-3 text-center rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm">
+                    <span class="block font-bold">4 - 7 yrs</span>
+                    <span class="text-[11px] opacity-75">Early Childhood</span>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="childAge" value="youth" class="peer sr-only">
+                  <div class="p-3 text-center rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm">
+                    <span class="block font-bold">8 - 12 yrs</span>
+                    <span class="text-[11px] opacity-75">School Age</span>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="childAge" value="teen" class="peer sr-only">
+                  <div class="p-3 text-center rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm">
+                    <span class="block font-bold">13 - 21+ yrs</span>
+                    <span class="text-[11px] opacity-75">Teens / Adults</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 2: Primary Focus Area -->
+            <div>
+              <label class="block text-sm font-semibold text-brand-200 mb-3">
+                2. What is your primary area of focus or concern?
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="cursor-pointer">
+                  <input type="radio" name="focusArea" value="behavior" class="peer sr-only" checked>
+                  <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm">
+                    <p class="font-bold"><i class="fa-solid fa-bolt mr-1.5 text-amber-300"></i> Emotional Regulation</p>
+                    <p class="text-xs text-slate-300 mt-1">Tantrums, transitions, sensory distress, self-soothing.</p>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="focusArea" value="speech" class="peer sr-only">
+                  <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm">
+                    <p class="font-bold"><i class="fa-solid fa-comment-dots mr-1.5 text-teal-300"></i> Communication & AAC</p>
+                    <p class="text-xs text-slate-300 mt-1">Non-verbal, speech delay, using tablets to express needs.</p>
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="focusArea" value="social" class="peer sr-only">
+                  <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm">
+                    <p class="font-bold"><i class="fa-solid fa-users-rays mr-1.5 text-rose-300"></i> Social & Daily Living</p>
+                    <p class="text-xs text-slate-300 mt-1">Making friends, hygiene, dressing, peer interaction.</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 3: Preferred Setting -->
+            <div>
+              <label class="block text-sm font-semibold text-brand-200 mb-3">
+                3. Preferred care delivery environment:
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="cursor-pointer">
+                  <input type="radio" name="setting" value="home" class="peer sr-only" checked>
+                  <div class="p-3 text-center rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm font-medium">
+                    <i class="fa-solid fa-house mr-1"></i> In-Home Therapy
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="setting" value="center" class="peer sr-only">
+                  <div class="p-3 text-center rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm font-medium">
+                    <i class="fa-solid fa-building-circle-check mr-1"></i> Center-Based Clinic
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="setting" value="hybrid" class="peer sr-only">
+                  <div class="p-3 text-center rounded-xl bg-white/5 border border-white/10 peer-checked:bg-brand-600 peer-checked:border-brand-400 hover:bg-white/10 transition text-sm font-medium">
+                    <i class="fa-solid fa-shuffle mr-1"></i> Flexible Hybrid
+                  </div>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10 flex justify-center">
+            <button type="submit" class="px-8 py-3.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-teal-500/20 transition transform hover:scale-105">
+              Generate Recommended Pathway <i class="fa-solid fa-wand-magic-sparkles ml-1"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Dynamic Results Container -->
+        <div id="quizResultBox" class="hidden mt-8 p-6 rounded-2xl bg-white text-slate-900 border-2 border-teal-400 animate-fadeIn">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex-shrink-0 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="space-y-2 flex-grow">
+              <span class="text-xs uppercase font-bold tracking-wider text-brand-700 bg-brand-50 px-2.5 py-0.5 rounded border border-brand-200">
+                Personalized Recommendation
+              </span>
+              <h3 id="resultTitle" class="font-display text-xl font-bold text-slate-900"></h3>
+              <p id="resultDesc" class="text-sm text-slate-600 leading-relaxed"></p>
+              
+              <div class="pt-3 flex flex-wrap items-center gap-3">
+                <button onclick="applyQuizToModal()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition flex items-center gap-2">
+                  <span>Register for this Pathway</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button onclick="resetQuiz()" class="text-xs text-slate-500 hover:text-slate-800 underline">
+                  Retake quiz
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT & PHILOSOPHY ================= -->
+  <section id="about" class="py-20 bg-warmbg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Image & Trust Collage -->
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80" 
+                 alt="Specialized therapist working compassionately with a child" 
+                 class="w-full h-96 object-cover"
+                 onerror="this.src='https://placehold.co/800x600/0f766e/ffffff?text=Compassionate+Care+Session'">
+          </div>
+          <!-- Overlay badge -->
+          <div class="absolute -bottom-6 -right-6 sm:bottom-6 sm:right-6 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 max-w-xs flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div>
+              <p class="font-bold text-sm text-slate-900">Accredited ABA</p>
+              <p class="text-xs text-slate-500">Adhering to BACB ethical compliance guidelines</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy -->
+        <div class="space-y-6">
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+            Our Care Philosophy
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            We Believe In Meeting Children Where They Are, Not Forcing Conformity.
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Every child’s brain is wired with extraordinary value. At BeaconCare, we reject rigid, compliance-only approaches. Instead, our behavioral health specialists incorporate trauma-informed, playful, and autonomy-first strategies that preserve each individual’s dignity.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Child-Led Play & Assent</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Therapy only moves forward when the child feels safe, heard, and voluntary in the activity.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fa-solid fa-people-roof"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Family-Centered Collaboration</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Parents aren't observers—they are vital co-leaders in setting clinical goals and tracking wins.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-700 flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fa-solid fa-handshake-angle"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Advocacy with Schools & Doctors</h4>
+                <p class="text-xs text-slate-500 mt-0.5">We attend IEP meetings and collaborate directly with pediatricians for synchronized developmental growth.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openIntakeModal()" class="px-6 py-3 rounded-xl bg-brand-700 text-white font-semibold text-sm hover:bg-brand-800 transition">
+              Meet Our Clinical Directors
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSURANCE & MEDICAID ACCEPTANCE ================= -->
+  <section id="insurance" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+          Financial Peace of Mind
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+          We Guide You Through Every Step of Insurance & Medicaid
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Therapy should never be out of reach due to bureaucratic confusion. Our dedicated billing coordinators run full eligibility checks before your first appointment at zero cost to you.
+        </p>
+      </div>
+
+      <!-- Insurance Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
+        <div class="p-5 rounded-2xl bg-warmbg border border-slate-200 text-center flex flex-col items-center justify-center h-28 hover:border-brand-400 transition">
+          <i class="fa-solid fa-hospital-user text-brand-600 text-2xl mb-1.5"></i>
+          <span class="text-xs font-bold text-slate-800">VA Medicaid</span>
+          <span class="text-[10px] text-slate-500">CCC Plus & Medallion</span>
+        </div>
+        <div class="p-5 rounded-2xl bg-warmbg border border-slate-200 text-center flex flex-col items-center justify-center h-28 hover:border-brand-400 transition">
+          <i class="fa-solid fa-shield-halved text-sky-600 text-2xl mb-1.5"></i>
+          <span class="text-xs font-bold text-slate-800">Anthem / BCBS</span>
+          <span class="text-[10px] text-slate-500">In-Network Preferred</span>
+        </div>
+        <div class="p-5 rounded-2xl bg-warmbg border border-slate-200 text-center flex flex-col items-center justify-center h-28 hover:border-brand-400 transition">
+          <i class="fa-solid fa-heart text-red-500 text-2xl mb-1.5"></i>
+          <span class="text-xs font-bold text-slate-800">Aetna</span>
+          <span class="text-[10px] text-slate-500">Commercial & Student</span>
+        </div>
+        <div class="p-5 rounded-2xl bg-warmbg border border-slate-200 text-center flex flex-col items-center justify-center h-28 hover:border-brand-400 transition">
+          <i class="fa-solid fa-star-of-life text-emerald-600 text-2xl mb-1.5"></i>
+          <span class="text-xs font-bold text-slate-800">CareFirst</span>
+          <span class="text-[10px] text-slate-500">Regional Coverage</span>
+        </div>
+        <div class="p-5 rounded-2xl bg-warmbg border border-slate-200 text-center flex flex-col items-center justify-center h-28 hover:border-brand-400 transition">
+          <i class="fa-solid fa-person-military-pointing text-indigo-600 text-2xl mb-1.5"></i>
+          <span class="text-xs font-bold text-slate-800">TRICARE</span>
+          <span class="text-[10px] text-slate-500">Military Family Support</span>
+        </div>
+        <div class="p-5 rounded-2xl bg-warmbg border border-slate-200 text-center flex flex-col items-center justify-center h-28 hover:border-brand-400 transition">
+          <i class="fa-solid fa-file-invoice-dollar text-amber-600 text-2xl mb-1.5"></i>
+          <span class="text-xs font-bold text-slate-800">Private Pay</span>
+          <span class="text-[10px] text-slate-500">Flexible Sliding Scales</span>
+        </div>
+      </div>
+
+      <!-- Verification Banner -->
+      <div class="mt-10 p-6 sm:p-8 rounded-3xl bg-brand-50 border border-brand-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Unsure if your insurance covers ABA or Speech?</h4>
+            <p class="text-xs sm:text-sm text-slate-600">Send us your carrier details; we provide complimentary benefits verification within 48 hours.</p>
+          </div>
+        </div>
+        <button onclick="prefillIntake('Insurance Verification Only')" class="px-6 py-3 rounded-xl bg-brand-700 text-white font-semibold text-xs sm:text-sm hover:bg-brand-800 transition whitespace-nowrap shadow-md">
+          Verify My Benefits Free
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FAMILY TESTIMONIALS ================= -->
+  <section id="testimonials" class="py-20 bg-warmbg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+          Real Stories, Real Milestones
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+          Loved by Parents, Celebrated by Kids
+        </h2>
+        <p class="text-slate-600 text-base mt-2">Hear directly from parents whose families transformed through continuous support.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Story 1 -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed mb-6">
+              "Before working with our BCBA Sarah, grocery shopping was nearly impossible due to sensory meltdowns. Within 6 months of in-home therapy, our 5-year-old now communicates using his AAC tablet and actually enjoys weekend family outings."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-sm">
+              MR
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900">Marcus & Rachel R.</h4>
+              <p class="text-[11px] text-slate-500">Parents to Liam (Age 5) &bull; Richmond, VA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed mb-6">
+              "Dominion-style care is rare. The team didn't try to change our daughter's personality—they honored her special interests in trains and astronomy to build her social circle. She made her first best friend in their social play group!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-800 flex items-center justify-center font-bold text-sm">
+              TL
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900">Tanya L.</h4>
+              <p class="text-[11px] text-slate-500">Mother of Maya (Age 9) &bull; Chesterfield, VA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed mb-6">
+              "Navigating the Virginia Medicaid DD waiver was overwhelming. BeaconCare's family intake coordinator walked us through the exact clinical documentation required. They saved our family months of waiting."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-800 flex items-center justify-center font-bold text-sm">
+              DK
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900">David K.</h4>
+              <p class="text-[11px] text-slate-500">Father of Jayden (Age 14) &bull; Henrico, VA</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACCORDION FAQS ================= -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-14">
+        <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+          Got Questions?
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Clear answers to common questions about autism therapies, registration, and schedules.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq('faq1')" class="w-full text-left p-5 bg-warmbg hover:bg-slate-100/70 flex justify-between items-center transition">
+            <span class="font-bold text-slate-800 text-sm sm:text-base">What is the difference between In-Home and Clinic-Based ABA?</span>
+            <i id="faq1-icon" class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq1" class="hidden p-5 bg-white text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+            In-Home therapy targets routines in the individual’s natural environment—such as morning wake-ups, mealtime habits, and sharing with siblings. Clinic-Based therapy offers structured classroom readiness, sensory gym equipment, and supervised peer socialization groups. Many children benefit from a hybrid model combining both!
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq('faq2')" class="w-full text-left p-5 bg-warmbg hover:bg-slate-100/70 flex justify-between items-center transition">
+            <span class="font-bold text-slate-800 text-sm sm:text-base">Do you work with non-speaking or non-verbal children?</span>
+            <i id="faq2-icon" class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq2" class="hidden p-5 bg-white text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+            Yes, absolutely. A significant portion of the individuals we serve are non-speaking or emerging communicators. Our therapists are trained in Augmentative and Alternative Communication (AAC), PECS (Picture Exchange Communication System), and sign language to help every child express their feelings, needs, and dreams.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq('faq3')" class="w-full text-left p-5 bg-warmbg hover:bg-slate-100/70 flex justify-between items-center transition">
+            <span class="font-bold text-slate-800 text-sm sm:text-base">How quickly can our child start after completing the intake form?</span>
+            <i id="faq3-icon" class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq3" class="hidden p-5 bg-white text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+            Once you submit your Family Intake Registration, our Clinical Coordinator reaches out within 24 to 48 business hours to verify insurance coverage and schedule your initial comprehensive assessment with a licensed BCBA. Most families begin direct sessions within 2 to 3 weeks of insurance authorization.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq('faq4')" class="w-full text-left p-5 bg-warmbg hover:bg-slate-100/70 flex justify-between items-center transition">
+            <span class="font-bold text-slate-800 text-sm sm:text-base">Does my child need an official Autism Spectrum diagnosis?</span>
+            <i id="faq4-icon" class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq4" class="hidden p-5 bg-white text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+            For insurance-funded Applied Behavior Analysis (ABA), carriers require a formal medical diagnostic report (F84.0). However, for speech therapy, private pay services, and general caregiver consultation, an official diagnosis is not always required. We also assist families who need diagnostic referrals.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CALL TO ACTION BANNER ================= -->
+  <section class="py-16 bg-gradient-to-r from-teal-700 via-brand-800 to-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="font-display text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+        Ready to take the first step together?
+      </h2>
+      <p class="text-brand-100 text-base sm:text-lg max-w-2xl mx-auto mb-8 font-normal">
+        No long automated queues. Speak with real clinical advocates who understand the joys and challenges of raising neurodivergent children.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="openIntakeModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl text-brand-900 bg-white hover:bg-brand-50 font-bold text-base shadow-xl transition transform hover:scale-105">
+          Schedule Free Intake Assessment
+        </button>
+        <a href="tel:8045550199" class="w-full sm:w-auto px-7 py-4 rounded-xl border border-brand-300 text-white hover:bg-white/10 font-medium text-base transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone"></i>
+          <span>Call (804) 555-0199</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RICH FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 text-xs sm:text-sm pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        
+        <!-- Brand Info & Mission -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg">
+              <i class="fa-solid fa-shapes"></i>
+            </div>
+            <span class="font-display font-extrabold text-xl text-white tracking-tight">Beacon<span class="text-brand-500">Care</span></span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            Empowering individuals with autism spectrum conditions and developmental delays to lead rich, independent, and joyful lives across Central Virginia and surrounding communities.
+          </p>
+
+          <!-- Social Links -->
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 transition">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-brand-600 transition">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-emerald-400 pt-2">
+            <i class="fa-solid fa-lock"></i>
+            <span>HIPAA-Compliant & Secure Data Protection</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">Clinical Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-brand-400 transition">In-Home ABA Therapy</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">Center-Based Clinic Programs</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">Speech & Augmentative Tech</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">Social Skills Peer Pods</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">Caregiver Coaching</a></li>
+            <li><a href="#services" class="hover:text-brand-400 transition">ADOS-2 Screening</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Resources -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">Family Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#care-finder" class="hover:text-brand-400 transition">Care Pathway Quiz</a></li>
+            <li><a href="#insurance" class="hover:text-brand-400 transition">Virginia Medicaid Guide</a></li>
+            <li><a href="#testimonials" class="hover:text-brand-400 transition">Parent Testimonials</a></li>
+            <li><a href="#faq" class="hover:text-brand-400 transition">Common Questions</a></li>
+            <li><a href="tel:8045550199" class="hover:text-brand-400 transition">Direct Crisis Line</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription Box -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider">Parent Newsletter</h4>
+          <p class="text-xs text-slate-400">Monthly autism resources, sensory tips, and sensory-friendly local events.</p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <input type="email" id="newsletterEmail" required placeholder="Enter parent email address" 
+                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white placeholder-slate-500 focus:border-brand-500 focus:outline-none">
+            <button type="submit" class="w-full py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs transition">
+              Subscribe Free
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 BeaconCare Autism & Family Services. All Rights Reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline">Notice of Privacy Practices (HIPAA)</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">Nondiscrimination Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MULTI-STEP FAMILY INTAKE MODAL ================= -->
+  <div id="intakeModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative my-8 animate-fadeIn">
+      
+      <!-- Close button -->
+      <button onclick="closeIntakeModal()" aria-label="Close Registration Dialog" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full w-9 h-9 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-brand-700 to-teal-800 text-white p-6 sm:p-8">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-teal-200 mb-1">
+          <i class="fa-solid fa-heart"></i> BeaconCare Family Intake
+        </div>
+        <h3 class="font-display text-2xl font-bold">Confidential Child & Family Registration</h3>
+        <p class="text-xs sm:text-sm text-brand-100 mt-1">Our clinical coordinators protect your privacy under strict HIPAA federal standards.</p>
+      </div>
+
+      <!-- Step Progress Bar -->
+      <div class="px-6 sm:px-8 pt-4 pb-2 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500">
+        <span id="stepIndicator1" class="text-brand-700 flex items-center gap-1.5"><i class="fa-solid fa-circle-dot"></i> Step 1: Parent & Child</span>
+        <span class="text-slate-300">&bull;</span>
+        <span id="stepIndicator2" class="flex items-center gap-1.5"><i class="fa-regular fa-circle"></i> Step 2: Care & Insurance</span>
+        <span class="text-slate-300">&bull;</span>
+        <span id="stepIndicator3" class="flex items-center gap-1.5"><i class="fa-regular fa-circle"></i> Step 3: Confirmation</span>
+      </div>
+
+      <!-- Intake Form -->
+      <form id="intakeForm" onsubmit="handleIntakeSubmit(event)" class="p-6 sm:p-8">
+        
+        <!-- STEP 1: Parent & Child Basic Info -->
+        <div id="modalStep1" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Parent / Guardian Full Name *</label>
+              <input type="text" id="parentName" required placeholder="e.g. Jessica Miller" 
+                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Contact Email Address *</label>
+              <input type="email" id="parentEmail" required placeholder="jessica@example.com" 
+                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number (Mobile preferred) *</label>
+              <input type="tel" id="parentPhone" required placeholder="(804) 555-0143" 
+                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">City / County in Virginia *</label>
+              <input type="text" id="parentCity" required placeholder="e.g. Richmond, Chesterfield, Henrico" 
+                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-100">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Child's Name or Initial *</label>
+              <input type="text" id="childName" required placeholder="e.g. Ethan" 
+                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Child's Age or DOB *</label>
+              <input type="text" id="childAgeField" required placeholder="e.g. 5 years old" 
+                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="pt-4 flex justify-end">
+            <button type="button" onclick="goToStep2()" class="px-6 py-2.5 rounded-xl bg-brand-600 text-white font-semibold text-xs sm:text-sm hover:bg-brand-700 transition flex items-center gap-2">
+              <span>Next: Services & Insurance</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Service Selection & Insurance -->
+        <div id="modalStep2" class="hidden space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Requested Program or Service *</label>
+            <select id="requestedService" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none bg-white">
+              <option value="Applied Behavior Analysis (ABA)">Applied Behavior Analysis (ABA Therapy)</option>
+              <option value="In-Home & Community Support">In-Home & Community Support</option>
+              <option value="Speech & AAC Communication">Speech, Language & AAC</option>
+              <option value="Social Skills & Peer Groups">Social Skills Peer Pods</option>
+              <option value="Caregiver Coaching & Respite">Caregiver Coaching & Respite Support</option>
+              <option value="Diagnostic Consultation / Assessment">Diagnostic Consultation / ADOS-2</option>
+              <option value="Insurance Verification Only">Insurance Verification Only</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Primary Insurance Carrier / Funding *</label>
+            <select id="insuranceType" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none bg-white">
+              <option value="Virginia Medicaid (CCC Plus / Medallion 4.0)">Virginia Medicaid (CCC Plus / Medallion 4.0)</option>
+              <option value="Anthem Blue Cross Blue Shield">Anthem Blue Cross Blue Shield</option>
+              <option value="Aetna Health">Aetna Health</option>
+              <option value="CareFirst BlueChoice">CareFirst BlueChoice</option>
+              <option value="TRICARE East">TRICARE East</option>
+              <option value="UnitedHealthcare / Optum">UnitedHealthcare / Optum</option>
+              <option value="Private Pay / Sliding Fee">Private Pay / Sliding Fee</option>
+              <option value="Unsure / Need Clinical Guidance">Unsure / Need Clinical Guidance</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Does your child have an existing Autism Spectrum diagnosis?</label>
+            <div class="flex items-center gap-4 text-xs font-medium text-slate-700 pt-1">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="hasDiagnosis" value="yes" checked class="text-brand-600">
+                <span>Yes, official diagnosis</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="hasDiagnosis" value="evaluation" class="text-brand-600">
+                <span>In evaluation process</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="hasDiagnosis" value="no" class="text-brand-600">
+                <span>Not diagnosed yet</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Additional Notes, Goals, or Questions (Optional)</label>
+            <textarea id="intakeNotes" rows="3" placeholder="Tell us about your child's favorite activities, current challenges, or specific scheduling needs..."
+                      class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:border-brand-600 focus:outline-none"></textarea>
+          </div>
+
+          <div class="pt-4 flex items-center justify-between">
+            <button type="button" onclick="goToStep1()" class="px-5 py-2 rounded-xl border border-slate-200 text-slate-600 font-semibold text-xs hover:bg-slate-50 transition">
+              <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+            <button type="submit" class="px-7 py-2.5 rounded-xl bg-brand-600 text-white font-semibold text-xs sm:text-sm hover:bg-brand-700 transition flex items-center gap-2 shadow-md">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Submit Family Intake</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Success Confirmation Screen -->
+        <div id="modalStep3" class="hidden text-center py-6 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-3xl animate-bounce">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h4 class="font-display text-2xl font-bold text-slate-900">Intake Received Successfully!</h4>
+          <p class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+            Thank you, <strong id="confirmParentName" class="text-slate-900"></strong>. Your child's intake has been securely routed to our intake clinical team.
+          </p>
+
+          <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-left max-w-md mx-auto text-xs space-y-1.5">
+            <p><strong>Tracking Case ID:</strong> <span id="confirmCaseId" class="font-mono text-brand-700">BC-2026-9812</span></p>
+            <p><strong>Assigned Intake Manager:</strong> Clinical Operations Department</p>
+            <p><strong>Next Step:</strong> You will receive a phone call & email confirmation within 24 hours.</p>
+          </div>
+
+          <div class="pt-4">
+            <button type="button" onclick="closeIntakeModal()" class="px-8 py-2.5 rounded-xl bg-slate-900 text-white font-semibold text-xs hover:bg-slate-800 transition">
+              Close Window
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= POPUP TOAST NOTIFICATION ================= -->
+  <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-800">
+      <div id="toastIcon" class="text-brand-400 text-lg">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div>
+        <p id="toastTitle" class="text-xs font-bold text-white"></p>
+        <p id="toastMessage" class="text-[11px] text-slate-300"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // --- Mobile Menu Toggle ---
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    function toggleMobileMenu() {
+      const isExpanded = mobileMenu.classList.contains('hidden');
+      if (isExpanded) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      }
+    }
+
+    // --- Modal Management ---
+    const intakeModal = document.getElementById('intakeModal');
+    const modalStep1 = document.getElementById('modalStep1');
+    const modalStep2 = document.getElementById('modalStep2');
+    const modalStep3 = document.getElementById('modalStep3');
+    const stepIndicator1 = document.getElementById('stepIndicator1');
+    const stepIndicator2 = document.getElementById('stepIndicator2');
+    const stepIndicator3 = document.getElementById('stepIndicator3');
+
+    function openIntakeModal() {
+      intakeModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeIntakeModal() {
+      intakeModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      // Reset after closing if completed
+      if (!modalStep3.classList.contains('hidden')) {
+        goToStep1();
+        document.getElementById('intakeForm').reset();
+      }
+    }
+
+    // Modal navigation between steps
+    function goToStep2() {
+      const parentName = document.getElementById('parentName').value.trim();
+      const parentEmail = document.getElementById('parentEmail').value.trim();
+      const parentPhone = document.getElementById('parentPhone').value.trim();
+      const childName = document.getElementById('childName').value.trim();
+
+      if (!parentName || !parentEmail || !parentPhone || !childName) {
+        showToast("Missing Information", "Please fill in the parent and child details before continuing.", "fa-triangle-exclamation text-amber-400");
+        return;
+      }
+
+      modalStep1.classList.add('hidden');
+      modalStep2.classList.remove('hidden');
+      modalStep3.classList.add('hidden');
+
+      stepIndicator1.className = "text-slate-400 flex items-center gap-1.5";
+      stepIndicator2.className = "text-brand-700 font-bold flex items-center gap-1.5";
+      stepIndicator3.className = "text-slate-400 flex items-center gap-1.5";
+    }
+
+    function goToStep1() {
+      modalStep1.classList.remove('hidden');
+      modalStep2.classList.add('hidden');
+      modalStep3.classList.add('hidden');
+
+      stepIndicator1.className = "text-brand-700 font-bold flex items-center gap-1.5";
+      stepIndicator2.className = "text-slate-400 flex items-center gap-1.5";
+      stepIndicator3.className = "text-slate-400 flex items-center gap-1.5";
+    }
+
+    // Quick prefill from service buttons
+    function prefillIntake(serviceName) {
+      document.getElementById('requestedService').value = serviceName;
+      openIntakeModal();
+      goToStep2(); // Directly jump to step 2 if they picked a service, or start at step 1
+      goToStep1();
+      showToast("Service Selected", `Configured intake for ${serviceName}.`, "fa-circle-info text-brand-400");
+    }
+
+    // Handle Modal Form Submit
+    function handleIntakeSubmit(e) {
+      e.preventDefault();
+      const parentName = document.getElementById('parentName').value.trim();
+      const randomCaseNumber = "BC-" + Math.floor(100000 + Math.random() * 900000);
+
+      document.getElementById('confirmParentName').innerText = parentName;
+      document.getElementById('confirmCaseId').innerText = randomCaseNumber;
+
+      modalStep1.classList.add('hidden');
+      modalStep2.classList.add('hidden');
+      modalStep3.classList.remove('hidden');
+
+      stepIndicator1.className = "text-slate-400 flex items-center gap-1.5";
+      stepIndicator2.className = "text-slate-400 flex items-center gap-1.5";
+      stepIndicator3.className = "text-emerald-600 font-bold flex items-center gap-1.5";
+
+      showToast("Intake Submitted", "Our clinical intake team has received your registration.", "fa-circle-check text-emerald-400");
+    }
+
+    // --- Care Pathway Quiz Logic ---
+    function handleQuizSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('quizForm');
+      const age = form.childAge.value;
+      const focus = form.focusArea.value;
+      const setting = form.setting.value;
+
+      const resultBox = document.getElementById('quizResultBox');
+      const resultTitle = document.getElementById('resultTitle');
+      const resultDesc = document.getElementById('resultDesc');
+
+      let title = "";
+      let description = "";
+      let targetService = "Applied Behavior Analysis (ABA)";
+
+      if (age === 'toddler' || age === 'early') {
+        if (focus === 'speech') {
+          title = "Early Intervention Speech & Natural Environment ABA";
+          description = "For children ages 18 months to 7 years needing communication support, our combined Speech-Language and play-based ABA builds vocal imitation, functional signing, and AAC fluency in your preferred setting.";
+          targetService = "Speech & AAC Communication";
+        } else {
+          title = "Early Intensive Behavioral Intervention (EIBI)";
+          description = "Proven 1-on-1 developmental support designed to build neural pathways early. Focuses on gentle transitions, gentle toilet training, joint attention, and sensory comfort.";
+          targetService = "Applied Behavior Analysis (ABA)";
+        }
+      } else {
+        if (focus === 'social') {
+          title = "Youth Social Skills & Peer Exploration Pods";
+          description = "Designed for school-age and teen neurodivergent youth. Groups are matched with similar age peers to practice collaborative gaming, group cooking, and conversational give-and-take.";
+          targetService = "Social Skills & Peer Groups";
+        } else {
+          title = "Community Independence & Behavioral Autonomy Pathway";
+          description = "Focused on life skills, self-advocacy, emotional de-escalation, and preparing for teen and young adult community involvement.";
+          targetService = "In-Home & Community Support";
+        }
+      }
+
+      resultTitle.innerText = title;
+      resultDesc.innerText = description;
+      resultBox.dataset.service = targetService;
+      resultBox.classList.remove('hidden');
+
+      // Smooth scroll to recommendation
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function applyQuizToModal() {
+      const resultBox = document.getElementById('quizResultBox');
+      const targetService = resultBox.dataset.service || 'Applied Behavior Analysis (ABA)';
+      document.getElementById('requestedService').value = targetService;
+      openIntakeModal();
+      showToast("Pathway Applied", `Set intake preference to ${targetService}`, "fa-check text-brand-400");
+    }
+
+    function resetQuiz() {
+      document.getElementById('quizForm').reset();
+      document.getElementById('quizResultBox').classList.add('hidden');
+    }
+
+    // --- Accordion Toggle ---
+    function toggleFaq(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close all other accordions for neatness
+      ['faq1', 'faq2', 'faq3', 'faq4'].forEach(otherId => {
+        const item = document.getElementById(otherId);
+        const itemIcon = document.getElementById(otherId + '-icon');
+        if (item && otherId !== id) {
+          item.classList.add('hidden');
+          if (itemIcon) itemIcon.classList.remove('rotate-180');
+        }
+      });
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // --- Newsletter Submission ---
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById('newsletterEmail');
+      showToast("Subscribed!", `We have added ${emailInput.value} to our monthly family resources newsletter.`, "fa-envelope-open-text text-brand-400");
+      emailInput.value = "";
+    }
+
+    // --- Toast Notification Helper ---
+    function showToast(title, message, iconClass = "fa-circle-check text-brand-400") {
+      const toast = document.getElementById('toastNotification');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMessage = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+
+      toastTitle.innerText = title;
+      toastMessage.innerText = message;
+      toastIcon.innerHTML = `<i class="fa-solid ${iconClass}"></i>`;
+
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 4500);
+    }
+
+    // Close modal on Escape key press
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !intakeModal.classList.contains('hidden')) {
+        closeIntakeModal();
+      }
+    });
+
+    // Close modal when clicking outside backdrop
+    intakeModal.addEventListener('click', (e) => {
+      if (e.target === intakeModal) {
+        closeIntakeModal();
+      }
+    });
+  </script>
+</body>
+</html>
